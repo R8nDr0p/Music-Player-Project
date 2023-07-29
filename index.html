@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Exam Rain</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/4473bce2a7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <div class="vinyl"></div>
+        <div class="album_cover_container">
+          <img
+            src="https://i.scdn.co/image/ab67616d0000b27357b6ee1ec17bfb191bc9495b"
+            alt="song-img"
+            class="song-img"
+          />
+        </div>
+        <div class="song-info">
+          <h1 class="song-title">Medisina</h1>
+          <p class="artist-name">Zild</p>
+        </div>
+        <div class="audio-controls">
+          <audio id="song">
+            <!-- <source src="music/Zild - Medisina.mp3" /> -->
+          </audio>
+        </div>
+        <div class="time-display">
+          <p id="start-time">00:00</p>
+          <p id="end-time">00:00</p>
+        </div>
+        <div class="seek-bar-container">
+          <input type="range" value="0" id="seek-bar" />
+        </div>
+        <div class="prev_play_next-container">
+          <div onclick=""><i class="fa-solid fa-backward-step"></i></div>
+          <div onclick="playPause()">
+            <i class="fa-solid fa-play" id="ctrlIcon"></i>
+          </div>
+          <div onclick=""><i class="fa-solid fa-forward"></i></div>
+        </div>
+      </div>
+      <div class="lyrics_albums_related-container">
+        <h1>Explore</h1>
+        <div class="selection_container">
+          <button id="lyricsBtn" class="active">Lyrics</button>
+          <button id="albumsBtn">Other Albums</button>
+          <button id="artistsBtn">Related Artists</button>
+        </div>
+        <div class="results-container">
+          <p class="loading-state">Loading....</p>
+          <div class="lyrics-container">
+            <p class="lyrics"></p>
+          </div>
+          <div class="album-container"></div>
+          <div class="related-artists-container">
+            <div class="card">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b27357b6ee1ec17bfb191bc9495b"
+                alt="artist pic"
+              />
+              <p>Zild Benitez</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b27357b6ee1ec17bfb191bc9495b"
+                alt="artist pic"
+              />
+              <p>Zild Benitez</p>
+            </div>
+            <div class="card">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b27357b6ee1ec17bfb191bc9495b"
+                alt="artist pic"
+              />
+              <p>Zild Benitez</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MUSIC PLAYER SCRIPTS -->
+    <script src="./js/musicplayer.js"></script>
+    <!-- // METADATA SIDE SCRIPTS -->
+    <script src="./js/metadataside.js"></script>
+  </body>
+</html>
