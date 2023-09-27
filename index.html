@@ -30,7 +30,7 @@
         </div>
         <div class="audio-controls">
           <audio id="song">
-            <!-- <source src="music/Zild - Medisina.mp3" /> -->
+            <source src="music/Zild - Medisina.mp3" />
           </audio>
         </div>
         <div class="time-display">
@@ -41,55 +41,51 @@
           <input type="range" value="0" id="seek-bar" />
         </div>
         <div class="prev_play_next-container">
-          <div onclick=""><i class="fa-solid fa-backward-step"></i></div>
+          <div onclick="previous()">
+            <i class="fa-solid fa-backward-step"></i>
+          </div>
           <div onclick="playPause()">
             <i class="fa-solid fa-play" id="ctrlIcon"></i>
           </div>
-          <div onclick=""><i class="fa-solid fa-forward"></i></div>
+          <div onclick="next()"><i class="fa-solid fa-forward"></i></div>
         </div>
       </div>
       <div class="lyrics_albums_related-container">
         <h1>Explore</h1>
-        <div class="selection_container">
-          <button id="lyricsBtn" class="active">Lyrics</button>
-          <button id="albumsBtn">Other Albums</button>
-          <button id="artistsBtn">Related Artists</button>
-        </div>
-        <div class="results-container">
-          <p class="loading-state">Loading....</p>
-          <div class="lyrics-container">
-            <p class="lyrics"></p>
-          </div>
-          <div class="album-container"></div>
-          <div class="related-artists-container">
-            <div class="card">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b27357b6ee1ec17bfb191bc9495b"
-                alt="artist pic"
-              />
-              <p>Zild Benitez</p>
+        <div class="tabs-container">
+          <ul class="selection_container">
+            <li><a href="#lyrics">Lyrics</a></li>
+            <li><a href="#album">Other Albums</a></li>
+            <li><a href="#artists">Related Artists</a></li>
+          </ul>
+          <div class="results-container">
+            <div id="lyrics" class="lyrics-container">
+              <p class="lyrics">
+                <span class="loading-state">
+                  <span class="cssload-loader"
+                    ><span class="cssload-loader-inner"></span
+                  ></span>
+                </span>
+              </p>
             </div>
-            <div class="card">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b27357b6ee1ec17bfb191bc9495b"
-                alt="artist pic"
-              />
-              <p>Zild Benitez</p>
+            <div id="album" class="album-container">
+              <span class="loading-state">
+                <span class="cssload-loader"
+                  ><span class="cssload-loader-inner"></span
+                ></span>
+              </span>
             </div>
-            <div class="card">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b27357b6ee1ec17bfb191bc9495b"
-                alt="artist pic"
-              />
-              <p>Zild Benitez</p>
+            <div id="artists" class="related-artists-container">
+              <span class="loading-state">
+                <span class="cssload-loader"
+                  ><span class="cssload-loader-inner"></span
+                ></span>
+              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- MUSIC PLAYER SCRIPTS -->
-    <script src="./js/musicplayer.js"></script>
-    <!-- // METADATA SIDE SCRIPTS -->
-    <script src="./js/metadataside.js"></script>
+    <script src="./js/fixed.js"></script>
   </body>
 </html>
