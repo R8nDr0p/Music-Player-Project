@@ -41,13 +41,13 @@
           <input type="range" value="0" id="seek-bar" />
         </div>
         <div class="prev_play_next-container">
-          <div onclick="previous()">
+          <div onclick="changeSong('previous')">
             <i class="fa-solid fa-backward-step"></i>
           </div>
           <div onclick="playPause()">
             <i class="fa-solid fa-play" id="ctrlIcon"></i>
           </div>
-          <div onclick="next()"><i class="fa-solid fa-forward"></i></div>
+          <div onclick="changeSong('next')"><i class="fa-solid fa-forward"></i></div>
         </div>
       </div>
       <div class="lyrics_albums_related-container">
