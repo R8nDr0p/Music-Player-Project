@@ -1,91 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Technical Exam Rain</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css"/>
     <script
-      src="https://kit.fontawesome.com/4473bce2a7.js"
-      crossorigin="anonymous"
+            src="https://kit.fontawesome.com/4473bce2a7.js"
+            crossorigin="anonymous"
     ></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="music-player">
-        <div class="vinyl"></div>
+</head>
+<body>
+<div class="container">
+    <div class="music-player">
+        <div class="vinyl-container toLeft">
+            <div class="vinyl"></div>
+        </div>
         <div class="album_cover_container">
-          <img
-            src="https://i.scdn.co/image/ab67616d0000b27357b6ee1ec17bfb191bc9495b"
-            alt="song-img"
-            class="song-img"
-          />
+            <img
+                    src="https://i.scdn.co/image/ab67616d0000b27357b6ee1ec17bfb191bc9495b"
+                    alt="song-img"
+                    class="song-img"
+            />
         </div>
         <div class="song-info">
-          <h1 class="song-title">Medisina</h1>
-          <p class="artist-name">Zild</p>
+            <h1 class="song-title">Medisina</h1>
+            <p class="artist-name">Zild</p>
         </div>
         <div class="audio-controls">
-          <audio id="song">
-            <source src="music/Zild - Medisina.mp3" />
-          </audio>
+            <audio id="song">
+                <source
+                        src="https://nmnn.ummn.nu/api/v1/download?sig=m3RQChapFF82OX2bmrAojyHNT8ufL6Mjoy%2BWKULdAoeszEoA22CWB0kOrwJEXu%2FjGqskNYXrd6H76dAKXweplgUhQ5z9aB2%2Frdbk75p6YfBe7TvgvPyokGunj%2FsoPuH7ADIH3n0RxRwPdOb3NstD%2BVn6etl4PvW%2BxojNx2eL5oDAqseLMUJApApxqKg3EgkgaZSwTmLkHYR%2Fij0gEUt7eNwc%2BgXD1Rq7Dcax5L2NamVdKR0aKkawP0iI%2BDY9K87WOMgG6mdNtiQ3608wGKnClmORW3vLFHTwWAgI%2FSBkRPhN%2FUHwvapx2bzRdAWRj7zxebkJsWiWy0WaesqIIFQa5g%3D%3D&v=v=-0JlqYekQlQ,-0JlqYekQlQ&_=0.13943228757803172"
+                />
+            </audio>
         </div>
         <div class="time-display">
-          <p id="start-time">00:00</p>
-          <p id="end-time">00:00</p>
+            <p id="start-time">00:00</p>
+            <p id="end-time">00:00</p>
         </div>
         <div class="seek-bar-container">
-          <input type="range" value="0" id="seek-bar" />
+            <input type="range" value="0" id="seek-bar"/>
         </div>
         <div class="prev_play_next-container">
-          <div onclick="changeSong('previous')">
-            <i class="fa-solid fa-backward-step"></i>
-          </div>
-          <div onclick="playPause()">
-            <i class="fa-solid fa-play" id="ctrlIcon"></i>
-          </div>
-          <div onclick="changeSong('next')"><i class="fa-solid fa-forward"></i></div>
+            <div onclick="changeSong('previous')">
+                <i class="fa-solid fa-backward-step"></i>
+            </div>
+            <div onclick="playPause()">
+                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+            </div>
+            <div onclick="changeSong('next')">
+                <i class="fa-solid fa-forward"></i>
+            </div>
         </div>
-      </div>
-      <div class="lyrics_albums_related-container">
+    </div>
+    <div class="lyrics_albums_related-container">
         <h1>Explore</h1>
         <div class="tabs-container">
-          <ul class="selection_container">
-            <li><a href="#lyrics">Lyrics</a></li>
-            <li><a href="#album">Other Albums</a></li>
-            <li><a href="#artists">Related Artists</a></li>
-          </ul>
-          <div class="results-container">
-            <div id="lyrics" class="lyrics-container">
-              <p class="lyrics">
+            <ul class="selection_container">
+                <li><a href="#lyrics">Lyrics</a></li>
+                <li><a href="#album">Other Albums</a></li>
+                <li><a href="#artists">Related Artists</a></li>
+            </ul>
+            <div class="results-container">
+                <div id="lyrics" class="lyrics-container">
+                    <p class="lyrics">
                 <span class="loading-state">
                   <span class="cssload-loader"
-                    ><span class="cssload-loader-inner"></span
+                  ><span class="cssload-loader-inner"></span
                   ></span>
                 </span>
-              </p>
-            </div>
-            <div id="album" class="album-container">
+                    </p>
+                </div>
+                <div id="album" class="album-container">
               <span class="loading-state">
                 <span class="cssload-loader"
-                  ><span class="cssload-loader-inner"></span
+                ><span class="cssload-loader-inner"></span
                 ></span>
               </span>
-            </div>
-            <div id="artists" class="related-artists-container">
+                </div>
+                <div id="artists" class="related-artists-container">
               <span class="loading-state">
                 <span class="cssload-loader"
-                  ><span class="cssload-loader-inner"></span
+                ><span class="cssload-loader-inner"></span
                 ></span>
               </span>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-    <script src="./js/fixed.js"></script>
-  </body>
+</div>
+<script src="./js/fixed.js"></script>
+</body>
 </html>

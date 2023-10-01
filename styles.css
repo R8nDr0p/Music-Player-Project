@@ -22,7 +22,7 @@
   padding: 25px 35px;
   text-align: center;
   border-radius: 20px;
-  position: relative;
+  /* position: relative; */
   opacity: 0.8;
 }
 
@@ -48,17 +48,46 @@ nav {
   border-radius: 5px;
   box-shadow: 0px 4px 4px 0px rgba (0, 0, 0, 0.3);
 }
+.vinyl-container {
+  position: relative;
+  top: 0;
+  left: 10rem;
+}
 .vinyl {
   position: absolute;
-  top: 2rem;
-  left: 12rem;
   width: 210px;
   height: 210px;
   background-image: url(https://www.pngmart.com/files/6/Vinyl-PNG-Transparent-Image.png);
   background-size: cover;
   background-position: center;
   opacity: 0.7;
-  z-index: -1;
+  z-index: -2;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes toLeft {
+  from {
+    left: 5rem;
+  }
+  to {
+    left: 10rem;
+  }
+}
+
+.toLeft {
+  animation: toLeft 500ms linear;
+}
+
+.rotating {
+  animation: rotate 10s linear infinite;
 }
 
 .song-info {
