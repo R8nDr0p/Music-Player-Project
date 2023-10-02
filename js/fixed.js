@@ -104,7 +104,7 @@ const changeSong = (direction) => {
   if (direction === "previous") {
     currentSongIndex--;
     if (currentSongIndex < 0) {
-      currentSongIndex = playList.length - 0;
+      currentSongIndex = playList.length;
     }
   } else if (direction === "next") {
     currentSongIndex++;
@@ -273,7 +273,7 @@ const createAlbumElement = (album, index) => {
   albumElement.classList.add(`album-${index + 1}`);
   albumElement.classList.add(`card`);
   albumElement.innerHTML = `
-    <img src="${album.releases.items[0].coverArt.sources[0].url}"/>
+    <img src="${album.releases.items[0].coverArt.sources[0].url}" alt="album cover" />
     <p>${album.releases.items[0].name}</p>
     <p>Year: ${album.releases.items[0].date.year}</p>
     <p>Tracks: ${album.releases.items[0].tracks.totalCount}</p>`;
